@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Wanderlust</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Wanderlust</h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="planner.html">Plan Your Trip</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Explore Destinations</h1>
+            <p>Discover amazing places around the world</p>
+        </div>
+    </section>
+
+    <section class="destination-filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="region">Region</label>
+                    <select id="region" class="filter-select">
+                        <option value="all">All Regions</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="americas">Americas</option>
+                        <option value="africa">Africa & Middle East</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="activity">Activity Type</label>
+                    <select id="activity" class="filter-select">
+                        <option value="all">All Activities</option>
+                        <option value="beach">Beach</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="culture">Cultural</option>
+                        <option value="nature">Nature</option>
+                        <option value="urban">Urban</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="budget">Budget</label>
+                    <select id="budget" class="filter-select">
+                        <option value="all">All Budgets</option>
+                        <option value="budget">Budget</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration" class="filter-select">
+                        <option value="all">Any Duration</option>
+                        <option value="weekend">Weekend (1-3 days)</option>
+                        <option value="short">Short Trip (4-7 days)</option>
+                        <option value="long">Long Trip (8-14 days)</option>
+                        <option value="extended">Extended (15+ days)</option>
+                    </select>
+                </div>
+                <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                <button id="resetFilters" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-grid">
+        <div class="container">
+            <div class="destinations-container" id="destinationsContainer">
+                <!-- Destinations will be loaded here via JavaScript -->
+            </div>
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Loading destinations...</p>
+            </div>
+            <div class="no-results hidden" id="noResults">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>No destinations found</h3>
+                <p>Try adjusting your filters or explore our featured destinations below.</p>
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be added via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-destinations">
+        <div class="container">
+            <h2 class="section-title">Featured Destinations</h2>
+            <div class="featured-grid">
+                <div class="featured-card" id="bali">
+                    <div class="featured-image">
+                        <img src="images/bali-large.jpg" alt="Bali, Indonesia">
+                        <div class="featured-badge">Most Popular</div>
+                    </div>
+                    <div class="featured-content">
+                        <h3>Bali, Indonesia</h3>
+                        <div class="featured-meta">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-calendar-alt"></i> 7-10 days recommended</span>
+                            <span><i class="fas fa-tag"></i> Beach, Culture, Adventure</span>
+                        </div>
+                        <p>Bali, the famed Island of the Gods, with its varied landscape of hills and mountains, rugged coastlines and sandy beaches, lush rice terraces and barren volcanic hillsides provides a picturesque backdrop to its colorful, deeply spiritual and unique culture.</p>
+                        <div class="featured-highlights">
+                            <h4>Highlights</h4>
+                            <ul>
+                                <li>Explore the sacred monkey forest sanctuary</li>
+                                <li>Visit ancient temples like Tanah Lot and Uluwatu</li>
+                                <li>Relax on pristine beaches in Kuta and Seminyak</li>
+                                <li>Experience traditional Balinese dance performances</li>
+                                <li>Trek through rice terraces in Ubud</li>
+                            </ul>
+                        </div>
+                        <a href="destination-detail.html?id=bali" class="btn btn-primary">View Details</a>
+                        <a href="planner.html?destination=bali" class="btn btn-secondary">Plan Your Trip</a>
+                    </div>
+                </div>
+
+                <div class="featured-card" id="santorini">
+                    <div class="featured-image">
+                        <img src="images/santorini-large.jpg" alt="Santorini, Greece">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Santorini, Greece</h3>
+                        <div class="featured-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-calendar-alt"></i> 5-7 days recommended</span>
+                            <span><i class="fas fa-tag"></i> Romantic, Beach, Culture</span>
+                        </div>
+                        <p>Santorini is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic eruption in the 16th century BC, forever shaping its rugged landscape. The whitewashed, cubiform houses of its two principal towns, Fira and Oia, cling to cliffs above an underwater caldera (crater).</p>
+                        <div class="featured-highlights">
+                            <h4>Highlights</h4>
+                            <ul>
+                                <li>Watch the famous sunset from Oia</li>
+                                <li>Explore the ancient ruins of Akrotiri</li>
+                                <li>Swim in the crystal-clear waters of Red Beach</li>
+                                <li>Sample local wines at traditional vineyards</li>
+                                <li>Take a boat tour around the caldera</li>
+                            </ul>
+                        </div>
+                        <a href="destination-detail.html?id=santorini" class="btn btn-primary">View Details</a>
+                        <a href="planner.html?destination=santorini" class="btn btn-secondary">Plan Your Trip</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destination-map">
+        <div class="container">
+            <h2 class="section-title">Explore the World</h2>
+            <div class="map-container" id="worldMap">
+                <!-- Interactive map will be loaded here via JavaScript -->
+                <div class="map-placeholder">
+                    <p>Loading interactive world map...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Destination Inspiration</h2>
+                <p>Subscribe to our newsletter and receive exclusive travel tips, destination guides, and special offers.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <div id="newsletterSuccess" class="success-message hidden">
+                    Thank you for subscribing! Check your email for a special welcome offer.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wanderlust</h2>
+                    <p>Your journey begins with us</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="press.html">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Destinations</h3>
+                        <ul>
+                            <li><a href="destinations.html#europe">Europe</a></li>
+                            <li><a href="destinations.html#asia">Asia</a></li>
+                            <li><a href="destinations.html#americas">Americas</a></li>
+                            <li><a href="destinations.html#africa">Africa & Middle East</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wanderlust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>
+

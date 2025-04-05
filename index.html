@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Explore the World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Wanderlust</h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="planner.html">Plan Your Trip</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore the world's most beautiful destinations with Wanderlust</p>
+            <div class="search-container">
+                <input type="text" placeholder="Where do you want to go?">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="hero-buttons">
+                <a href="planner.html" class="btn btn-primary">Plan Your Trip</a>
+                <a href="destinations.html" class="btn btn-secondary">Explore Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Wanderlust?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Curated Destinations</h3>
+                    <p>Handpicked destinations from around the world to ensure unforgettable experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-route"></i>
+                    <h3>Custom Itineraries</h3>
+                    <p>Create and customize your perfect travel itinerary with our easy-to-use planner.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We ensure you get the best deals on flights, accommodations, and activities.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our travel experts are available round the clock to assist you with any queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending-destinations">
+        <div class="container">
+            <h2 class="section-title">Trending Destinations</h2>
+            <div class="destination-slider" id="destinationSlider">
+                <div class="destination-card">
+                    <img src="https://etimg.etb2bimg.com/photo/115997634.cms" alt="Bali, Indonesia">
+                    <div class="destination-info">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Experience the perfect blend of beaches, culture, and adventure</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-calendar-alt"></i> 7-10 days</span>
+                        </div>
+                        <a href="destinations.html#bali" class="btn btn-sm">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg" alt="Santorini, Greece">
+                    <div class="destination-info">
+                        <h3>Santorini, Greece</h3>
+                        <p>Discover the iconic white buildings and breathtaking sunsets</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-calendar-alt"></i> 5-7 days</span>
+                        </div>
+                        <a href="destinations.html#santorini" class="btn btn-sm">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMWI7uWi3qLtbG4rCXQYUvrigNSzJjLpzlg&s2" alt="Kyoto, Japan">
+                    <div class="destination-info">
+                        <h3>Kyoto, Japan</h3>
+                        <p>Immerse yourself in ancient temples and traditional Japanese culture</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                            <span><i class="fas fa-calendar-alt"></i> 4-6 days</span>
+                        </div>
+                        <a href="destinations.html#kyoto" class="btn btn-sm">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://uceap.universityofcalifornia.edu/sites/default/files/marketing-images/life-in-city-images/paris-france-gallery-2.jpg" alt="Paris, France">
+                    <div class="destination-info">
+                        <h3>Paris, France</h3>
+                        <p>Fall in love with the city of lights and its romantic atmosphere</p>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-calendar-alt"></i> 4-7 days</span>
+                        </div>
+                        <a href="destinations.html#paris" class="btn btn-sm">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prevBtn" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextBtn" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscription-plans">
+        <div class="container">
+            <h2 class="section-title">Choose Your Travel Plan</h2>
+            <p class="section-subtitle">Select the perfect subscription plan for your travel needs</p>
+            
+            <div class="plans-container">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Explorer</h3>
+                        <div class="plan-price">
+                            <span class="price">$9.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to basic travel guides</li>
+                            <li><i class="fas fa-check"></i> Limited trip planning tools</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Basic travel insurance options</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Exclusive deals and discounts</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Priority customer support</li>
+                        </ul>
+                    </div>
+                    <a href="signup.html?plan=explorer" class="btn btn-plan">Get Started</a>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Adventurer</h3>
+                        <div class="plan-price">
+                            <span class="price">$19.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to premium travel guides</li>
+                            <li><i class="fas fa-check"></i> Advanced trip planning tools</li>
+                            <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                            <li><i class="fas fa-check"></i> Comprehensive travel insurance</li>
+                            <li><i class="fas fa-check"></i> Exclusive deals and discounts</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Personalized travel concierge</li>
+                        </ul>
+                    </div>
+                    <a href="payment.html" class="btn btn-plan">Get Started</a>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Globetrotter</h3>
+                        <div class="plan-price">
+                            <span class="price">$39.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to all travel guides and resources</li>
+                            <li><i class="fas fa-check"></i> Premium trip planning tools</li>
+                            <li><i class="fas fa-check"></i> 24/7 priority customer support</li>
+                            <li><i class="fas fa-check"></i> Premium travel insurance with extended coverage</li>
+                            <li><i class="fas fa-check"></i> VIP deals and exclusive discounts</li>
+                            <li><i class="fas fa-check"></i> Personalized travel concierge service</li>
+                        </ul>
+                    </div>
+                    <a href="signup.html?plan=globetrotter" class="btn btn-plan">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Travelers Say</h2>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Wanderlust made planning our honeymoon to Bali so easy! The customized itinerary was perfect, and we saved so much money with their exclusive deals."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial1.jpg" alt="Sarah and Mike">
+                        <div>
+                            <h4>Sarah and Mike</h4>
+                            <p>Honeymooners</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a solo traveler, safety is my priority. Wanderlust's detailed guides and 24/7 support made me feel secure throughout my journey across Southeast Asia."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial2.jpg" alt="James">
+                        <div>
+                            <h4>James Wilson</h4>
+                            <p>Solo Traveler</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our family vacation to Costa Rica was the trip of a lifetime! The kids loved the activities Wanderlust recommended, and everything was within our budget."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial3.jpg" alt="The Rodriguez Family">
+                        <div>
+                            <h4>The Rodriguez Family</h4>
+                            <p>Family Travelers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Inspired for Your Next Journey</h2>
+                <p>Subscribe to our newsletter and receive exclusive travel tips, destination guides, and special offers.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <div id="newsletterSuccess" class="success-message hidden">
+                    Thank you for subscribing! Check your email for a special welcome offer.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Wanderlust</h2>
+                    <p>Your journey begins with us</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="press.html">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Destinations</h3>
+                        <ul>
+                            <li><a href="destinations.html#europe">Europe</a></li>
+                            <li><a href="destinations.html#asia">Asia</a></li>
+                            <li><a href="destinations.html#americas">Americas</a></li>
+                            <li><a href="destinations.html#africa">Africa & Middle East</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wanderlust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .payment-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .payment-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .payment-header h1 {
+            color: #2A2A84;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .method-card {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .method-card.active {
+            border-color: #2A2A84;
+            background-color: #F0F4FF;
+        }
+
+        .payment-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            color: #444;
+            font-weight: 500;
+        }
+
+        input {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .card-info {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+        }
+
+        .pay-button {
+            background-color: #2A2A84;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pay-button:hover {
+            background-color: #4A4AB8;
+        }
+
+        .security-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .order-summary {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #F0F4FF;
+            border-radius: 8px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .total {
+            font-weight: bold;
+            color: #2A2A84;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-header">
+            <h1>Secure Payment</h1>
+            <p>Complete your purchase securely</p>
+        </div>
+
+        <div class="payment-methods">
+            <div class="method-card active">
+                <h3>Credit Card</h3>
+            </div>
+            <div class="method-card">
+                <h3>PayPal</h3>
+            </div>
+            <div class="method-card">
+                <h3>Apple Pay</h3>
+            </div>
+        </div>
+
+        <form class="payment-form">
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+            </div>
+
+            <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" placeholder="John Doe">
+            </div>
+
+            <div class="card-info">
+                <div class="form-group">
+                    <label>Expiration Date</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" maxlength="3">
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span>$450.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax:</span>
+                    <span>$45.00</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span>$495.00</span>
+                </div>
+            </div>
+
+            <!-- <button type="submit" class="pay-button">Pay $495.00</button> -->
+             <a href="index.html" type="submit" class="pay-button">Pay $495.00</a>
+
+            <div class="security-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2A2A84">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                </svg>
+                <span>Secure SSL Encryption</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
